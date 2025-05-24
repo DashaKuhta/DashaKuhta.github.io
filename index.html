@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <!-- Мета-теги для кодировки и адаптивности -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      <!-- Подключение стилей Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/css/index.css" />
+    <link rel="shortcut icon" href="images/icons/123.jpg" />
+    <script src="https://use.fontawesome.com/2a7526fdbd.js" defer></script>
+    <script
+      src="https://unpkg.com/swiper@7/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="js/swiper.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
+    <title>Eventplace</title>
+    <title>Баннер</title>
+  </head>
+  <body>
+      <!-- Основная обертка страницы -->
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="header__container _container">
+            <div class="header__body">
+              <!-- Блок с логотипом -->
+              <div class="header__logo">
+                <a href="#" class="logo-main">
+                  <img src="images/main-logo.svg" alt="Logotype" />
+                </a>
+              </div>
+               <!-- Основное содержимое шапки -->
+              <div class="header__main">
+                <div class="header__columns">
+                  <div class="header__column">Все площадки Краснодара</div>
+                  <div class="header__column">+ Добавить площадку</div>
+                </div>
+              </div>
+                <!-- Меню и иконки -->
+              <div class="header__menu">
+                <div class="menu-icon__link">
+                  <a href="#" class="menu-icon__link_contact">
+                    <img src="images/icons/e-icon.svg" alt="Ethernet icon" />
+                  </a>
+                </div>
+                 <!-- Бургер-меню для мобильной версии -->
+                <div class="menu-header">
+                  <button type="button" class="burger-menu">
+                    <span></span>
+                  </button>
+                   <!-- Выпадающее меню -->
+                  <ul class="menubox">
+                    <li><a class="menu-item" href="#">Главная</a></li>
+                    <li><a class="menu-item" href="#">О нас</a></li>
+                    <li><a class="menu-item" href="#">Блог</a></li>
+                    <li><a class="menu-item" href="#">Площадки</a></li>
+                    <li><a class="menu-item" href="#">Контакты</a></li>
+                  </ul>
+                    <!-- Аватар пользователя -->
+                  <span class="menu-header__avatar">
+                    <img src="./images/user.png" alt="Avatar" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+       <!-- Основное содержимое страницы -->
+      <main class="main">
+          <!-- Секция главного слайдера -->
+        <section class="page__main-slider main-slider">
+          <div class="main-slider__container">
+                <!-- Форма поиска -->
+            <div class="main-slider__search search-main">
+              <form action="" method="get" class="search-main__form">
+                 <!-- Поле выбора типа события -->
+                <div class="field">
+                  <label for="contact"> Тип события </label>
+                  <input
+                    id="contactOne"
+                    type="text"
+                    placeholder="Выберите событие"
+                    class="input desktop colortext _long circle"
+                  />
+                   <!-- Выпадающее меню типов событий -->
+                  <ul class="event__type-menu menu">
+                    <li class="event__type-link">
+                      <a href="#">Праздник</a>
+                      <ul class="event__type-submenu">
+                        <li class="event__type-sublink">
+                          <a href="#">День рождения</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Свадьба</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Выпускной</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Корпоратив</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="event__type-link">
+                      <a href="#">Развлекательное</a>
+                      <ul class="event__type-submenu">
+                        <li class="event__type-sublink">
+                          <a href="#">Модный показ</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Концерт</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Кулинарный мастер-класс</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Литературный вечер</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="event__type-link"><a href="#">Съёмки</a></li>
+                    <li class="event__type-link"><a href="#">Деловое</a></li>
+                    <li class="event__type-link">
+                      <a href="#">Другое</a>
+                      <ul class="event__type-submenu">
+                        <li class="event__type-sublink">
+                          <a href="#">Йога</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Спид-дейтинг</a>
+                        </li>
+                        <li class="event__type-sublink">
+                          <a href="#">Занятия танцами</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                 <!-- Поля для дат -->
+                <div class="field">
+                  <label for="contact"> Начало </label>
+                  <input
+                    id="contactTwo"
+                    type="search"
+                    placeholder="Когда?"
+                    class="input desktop colortext _short"
+                  />
+                </div>
+                  <!-- Поле для количества гостей -->
+                <div class="field">
+                  <label for="contact">Конец </label>
+                  <input
+                    id="contactThree"
+                    type="search"
+                    placeholder="Когда?"
+                    class="input desktop colortext _short"
+                  />
+                </div>
+                <div class="field">
+                  <label for="contact">Количество гостей</label>
+                  <input
+                    id="contactFour"
+                    type="text"
+                    placeholder="Кто приедет?"
+                    class="input desktop colortext _long"
+                  />
+                  <table id="myTable" class="guest__list menu">
+                    <tr>
+                      <td>
+                        <p class="guest__list-title">Взрослые</p>
+                        <p class="guest__list-text">От 13 лет</p>
+                      </td>
+                      <td>
+                        <button class="button__plus" type="button">
+                          <i class="fa fa-plus"></i></button
+                        ><span class="counter">0</span
+                        ><button class="button__minus" type="button">
+                          <i class="fa fa-minus"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="guest__list-title">Дети</p>
+                        <p class="guest__list-text">От 2 до 12 лет</p>
+                      </td>
+                      <td>
+                        <button class="button__plus" type="button">
+                          <i class="fa fa-plus"></i></button
+                        ><span class="counter">0</span
+                        ><button class="button__minus" type="button">
+                          <i class="fa fa-minus"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="guest__list-title">Младенцы</p>
+                        <p class="guest__list-text">До 2 лет</p>
+                      </td>
+                      <td>
+                        <button class="button__plus" type="button">
+                          <i class="fa fa-plus"></i></button
+                        ><span class="counter">0</span
+                        ><button class="button__minus" type="button">
+                          <i class="fa fa-minus"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <button class="apply" type="button">Применить</button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                   <!-- Кнопка поиска -->
+                <button type="submit" class="search-main__btn btn">
+                  <i class="fa fa-search icon-search"></i>
+                </button>
+              </form>
+            </div>
+             <!-- Обертка для контента слайдера -->
+            <div class="main-slider__wrapper">
+              <div class="main-slider__body">
+                <div class="main-slider__container _container">
+                  <h1 class="main-slider__title">
+                    Eventplace - <br /><span>с нами весело!</span>
+                  </h1>
+                  <a href="#" class="main-slider__button">Найти место</a>
+                </div>
+              </div>
+               <!-- Слайдер с изображениями -->
+              <div class="main-slider__slider slider-main">
+                <div class="slider-main__body swiper-container">
+                  <div class="slider-main__wrapper swiper-wrapper">
+                    <div class="slider-main__slide swiper-slide">
+                      <div class="slider-main__image _ibg">
+                        <img src="./images/chef.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="slider-main__slide swiper-slide">
+                      <div class="slider-main__image _ibg">
+                        <img src="./images/chef.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="slider-main__slide swiper-slide">
+                      <div class="slider-main__image _ibg">
+                        <img src="./images/chef.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="slider-main__slide swiper-slide">
+                      <div class="slider-main__image _ibg">
+                        <img src="./images/chef.png" alt="Image" />
+                      </div>
+                    </div>
+                    <div class="slider-main__slide swiper-slide">
+                      <div class="slider-main__image _ibg">
+                        <img src="./images/chef.png" alt="Image" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Элементы управления слайдером -->
+            <div class="slider-main__controls controls-slider-main">
+              <div class="controls-slider-main__dotts"></div>
+            </div>
+            <!-- Мобильная версия поиска -->
+            <div class="search-mobile__wrapper">
+              <form action="" method="get" class="search-mobile__form">
+                <div class="field">
+                  <input
+                    id="contactOne"
+                    type="text"
+                    placeholder="Поиск"
+                    class="mobile colortext circle"
+                  />
+                </div>
+                <button type="submit" class="search-mobile__btn _mobile btn">
+                  <i class="fa fa-search icon-search"></i>
+                </button>
+              </form>
+
+              <div class="header__main-mobile">
+                <div class="header__columns-mobile">
+                  <div class="header__column-mobile mobile-column">
+                    <a href="#" class="mobile-column__link">
+                      Все площадки Краснодара
+                    </a>
+                  </div>
+                  <div class="header__column-mobile mobile-column">
+                    <a href="#" class="mobile-column__link">
+                      + Добавить площадку
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+          <!-- Секция с площадками -->
+        <section class="page__spaces spaces">
+          <div class="spaces__container">
+            <div class="spaces__title _title">Любой тип площадки</div>
+            <!-- Блок с карточками площадок -->
+            <div class="spaces__box">
+              <div class="spaces__box-left">
+                <a class="spaces__card">
+                    <div class="spaces__item-title">Лофт</div>
+                    <img src="./images/spaces/img-01.png" alt="Image" />
+                </a>
+                <a class="spaces__card" href="/">
+                  <div class="spaces__item-title">Коттеджи</div>
+                  <img src="./images/spaces/img-02.png" alt="Image" />
+                </a>
+              </div>
+              <div class="spaces__box-right">
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title">Бар</div>
+                  <img src="./images/spaces/img-03.png" alt="Image" />
+                </a>
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title">Беседки</div>
+                  <img src="./images/spaces/img-04.png" alt="Image" />
+                </a>
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title">Бани и сауны</div>
+                  <img src="./images/spaces/img-05.png" alt="Image" />
+                </a>
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title">Боулинг</div>
+                  <img src="./images/spaces/img-06.png" alt="Image" />
+                </a>
+                <a href="" class="spaces__item">
+                  <div class="spaces__item-title spaces__item-active">Квесты</div>
+                  <img src="./images/spaces/img-07.png" alt="Image" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+          <!-- Секция слайдера событий -->
+        <section class="page__event-slider event-slider">
+          <div class="event-slider__wrapper">
+            <div class="event-slider__body">
+              <div class="event-slider__container _container">
+                <div class="event-slider__slider slider-event">
+                  <div class="slider-event__body swiper-container">
+                    <div class="slider-event__wrapper swiper-wrapper">
+                      <div class="slider-event__slide swiper-slide">
+                        <div class="slider-event__image _ibg">
+                          <img src="./images/event-slider.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div class="slider-event__slide swiper-slide">
+                        <div class="slider-event__image _ibg">
+                          <img src="./images/event-slider.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div class="slider-event__slide swiper-slide">
+                        <div class="slider-event__image _ibg">
+                          <img src="./images/event-slider.png" alt="Image" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="event-slider__content">
+                  <h2 class="event-slider__title">Эксклюзивные события</h2>
+                  <div class="event-slider__text">
+                    <p>
+                      Подберем самые интересные события на основе ваших
+                      предпочтений. Найдем эксклюзивные мероприятия, которых
+                      больше ни у кого нет.
+                    </p>
+                    <p>
+                      Подберем самые интересные события на основе ваших
+                      предпочтений. Найдем эксклюзивные мероприятия, которых
+                      больше ни у кого нет
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-event__controls controls-slider-event">
+            <button type="button" class="slider-arrow slider-arrow_next">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <div class="controls-slider-event__dotts"></div>
+            <button type="button" class="slider-arrow slider-arrow_prev">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="page__spaces spaces">
+          <div class="spaces__container">
+            <div class="spaces__title _title">Любой тип площадки</div>
+            <div class="spaces__box spaces__box-reverse">
+              <div class="spaces__box-right">
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title">Рестораны</div>
+                  <img src="./images/21.jpg" alt="Image" />
+                </a>
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title">Антикафе</div>
+                  <img src="./images/22.jpg" alt="Image" />
+                </a>
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title">Батуты</div>
+                  <img src="./images/23.jpg" alt="Image" />
+                </a>
+                <a href="" class="spaces__item">
+                  <div class="spaces__item-title">Конференц-залы</div>
+                  <img src="./images/25.jpg" alt="Image" />
+                </a>
+                <a class="spaces__item" href="/">
+                  <div class="spaces__item-title spaces__item-active">Студии(фото/видео)</div>
+                  <img src="./images/26.jpg" alt="Image" />
+                </a>
+              </div>
+              <div class="spaces__box-left">
+                <div class="spaces__card">
+                  <div class="spaces__item-title">Караоке</div>
+                  <img src="./images/24.jpg" alt="Image" />
+                </div>
+                <a class="spaces__card" href="/">
+                  <div class="spaces__item-title">Клуб</div>
+                  <img src="./images/27.jpg" alt="Image" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__event-slider event-slider">
+          <div class="event-slider__wrapper">
+            <div class="event-slider__body">
+              <div class="event-slider__container _container">
+
+
+                <div class="event-slider__content">
+                  <h2 class="event-slider__title">Эксклюзивные события</h2>
+                  <div class="event-slider__text">
+                    <p>
+                      Подберем самые интересные события на основе ваших
+                      предпочтений. Найдем эксклюзивные мероприятия, которых
+                      больше ни у кого нет.
+                    </p>
+                    <p>
+                      Подберем самые интересные события на основе ваших
+                      предпочтений. Найдем эксклюзивные мероприятия, которых
+                      больше ни у кого нет
+                    </p>
+                  </div>
+                </div>
+                                <div class="event-slider__slider slider-event">
+                  <div class="slider-event__body swiper-container">
+                    <div class="slider-event__wrapper swiper-wrapper">
+                      <div class="slider-event__slide swiper-slide">
+                        <div class="slider-event__image _ibg">
+                          <img src="./images/event-slider.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div class="slider-event__slide swiper-slide">
+                        <div class="slider-event__image _ibg">
+                          <img src="./images/event-slider.png" alt="Image" />
+                        </div>
+                      </div>
+                      <div class="slider-event__slide swiper-slide">
+                        <div class="slider-event__image _ibg">
+                          <img src="./images/event-slider.png" alt="Image" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-event__controls controls-slider-event">
+            <button type="button" class="slider-arrow slider-arrow_next">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <div class="controls-slider-event__dotts2"></div>
+            <button type="button" class="slider-arrow slider-arrow_prev">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+        <!-- Секция типов событий -->
+        <section class="page__types types">
+          <div class="types__container _container">
+            <div class="types__title_main _title">Любой тип события</div>
+            <!-- Сетка типов событий -->
+            <div class="types__items">
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+              <div class="types__item">
+                <div class="types__icon">
+                  <img src="./images/type-icon.png" alt="Image" />
+                </div>
+                <div class="types__title">Тип</div>
+                <div class="types__text">Мероприятия</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+       <!-- Подвал сайта -->
+      <footer class="footer">
+        <div class="footer__container _container">
+          <div class="footer__body">
+            <div class="footer__menu menu-footer">
+               <!-- Колонка с иконками соцсетей -->
+              <div class="menu-footer__column">
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__link">
+                    <a href="#">Наши преимущества</a>
+                  </li>
+                  <li class="menu-footer__link">
+                    <a href="#">Как работает сервис?</a>
+                  </li>
+                  <li class="menu-footer__link">
+                    <a href="#">Подключится к Eventplace</a>
+                  </li>
+                  <li class="menu-footer__link">
+                    <a href="#">Гарантии и безопастность</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-footer__column">
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__link">
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li class="menu-footer__link"><a href="#">Документы</a></li>
+                  <li class="menu-footer__link"><a href="#">Инвесторам</a></li>
+                  <li class="menu-footer__link"><a href="#">СМИ о нас</a></li>
+                </ul>
+              </div>
+              <div class="menu-footer__column">
+                <div class="menu-footer__icons">
+                  <i class="fa fa-facebook-f menu-footer__icon"></i>
+                  <i class="fa fa-telegram menu-footer__icon"></i>
+                  <i class="fa fa-instagram menu-footer__icon"></i>
+                  <i class="fa fa-vk menu-footer__icon"></i>
+                </div>
+                <div class="menu-footer__company">
+                  <div class="menu-footer__company_name">OOO “Eventpacle”</div>
+                  <div class="menu-footer__company_name">OOO “Eventpacle”</div>
+                </div>
+              </div>
+            </div>
+                <!-- Копирайт -->
+            <div class="footer__copyright">
+              <div class="footer__copyright-column">
+                © 2021 All rights reserved
+              </div>
+              <div class="footer__copyright-column">
+                <div class="footer__copyright-column_left">
+                  Конфиденциальность
+                </div>
+                <div class="footer__copyright-column_right">Условия</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+<div class="hidden" id="banner">
+  <img src="./images/banner.jpg">
+    <button id="clodeBtn">Закрыть</button>
+</div>
+<script src="banner.js"></script>
+<script src="form-validation.js"></script>
+
+
+<!--<script src="./js/jquery-3.7.1.js"></script>
+<script>
+  console.log($);
+</script> -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Получаем элементы формы
+    const eventTypeInput = document.getElementById('contactOne');
+    const startDateInput = document.getElementById('contactTwo');
+    const endDateInput = document.getElementById('contactThree');
+    const guestsInput = document.getElementById('contactFour');
+    const searchForm = document.querySelector('.search-main__form');
+    
+    // Создаем элементы для отображения ошибок
+    const createErrorElement = (input, message) => {
+        let errorElement = input.nextElementSibling;
+        if (!errorElement || !errorElement.classList.contains('error-message')) {
+            errorElement = document.createElement('div');
+            errorElement.className = 'error-message';
+            errorElement.style.color = 'red';
+            errorElement.style.fontSize = '12px';
+            errorElement.style.marginTop = '5px';
+            input.parentNode.insertBefore(errorElement, input.nextSibling);
+        }
+        errorElement.textContent = message;
+        input.style.borderColor = 'red';
+        return errorElement;
+    };
+    
+    // Удаляем сообщение об ошибке
+    const removeError = (input) => {
+        const errorElement = input.nextElementSibling;
+        if (errorElement && errorElement.classList.contains('error-message')) {
+            errorElement.remove();
+        }
+        input.style.borderColor = '';
+    };
+    
+    // Валидация типа события (макс 10 символов)
+    eventTypeInput.addEventListener('input', function() {
+        if (this.value.length > 10) {
+            createErrorElement(this, 'Максимум 10 символов');
+            this.value = this.value.substring(0, 10);
+        } else {
+            removeError(this);
+        }
+    });
+    
+    // Валидация числовых полей (начало, конец, гости)
+    [startDateInput, endDateInput, guestsInput].forEach(input => {
+        input.addEventListener('input', function() {
+            // Проверяем, что введено число
+            if (this.value && isNaN(this.value)) {
+                createErrorElement(this, 'Введите число');
+            } else {
+                removeError(this);
+            }
+        });
+    });
+    
+    // Валидация при отправке формы
+    searchForm.addEventListener('submit', function(e) {
+        let isValid = true;
+        
+        // Проверка типа события
+        if (eventTypeInput.value.length > 10) {
+            createErrorElement(eventTypeInput, 'Максимум 10 символов');
+            isValid = false;
+        }
+        
+        // Проверка числовых полей
+        [startDateInput, endDateInput, guestsInput].forEach(input => {
+            if (input.value && isNaN(input.value)) {
+                createErrorElement(input, 'Введите число');
+                isValid = false;
+            }
+        });
+        
+        if (!isValid) {
+            e.preventDefault();
+        }
+    });
+    
+    // Для поля количества гостей - делаем его числовым
+    guestsInput.type = 'number';
+    guestsInput.min = '0';
+});
+</script>
+
+<style>
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+</style>
+
+
+
+ </body>
+
+</html>
