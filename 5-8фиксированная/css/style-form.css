@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Open Sans", sans-serif;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    height: 50vh;
+}
+
+.container-1{
+    display: flex;
+    background-color: #282A31;
+    padding: 10px 5px 10px 5px;
+    width: clamp(300px,50vw,500px);
+}
+
+.title{
+    color: azure;
+    margin-bottom: 1%;
+}
+.user{
+    font-size: 0.9em;
+    color: #51525D;
+}
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(100, 100, 100);
+    padding: 2%;
+    row-gap: 10%;
+    max-height: 85px;
+    background-color: #3B3944;
+    color: aliceblue;
+}
+
+.login-t1{
+    font-size: 0.9em;
+    width: 16%;
+    margin-right: .7em;
+}
+.inp-1{
+    width: 67%;
+    margin-left: 10%;
+    box-shadow: 0px 0.2px 0.1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+.check{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    background-color: #3B3944;
+    color: #777777;
+}
+.check-t1{
+    width: 80%;
+}
+.check-inp-2{
+    margin-left: 10%;
+    width: 10%;
+    box-shadow: 0px 0.2px 0.1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+.btn-1{
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: rgb(0, 152, 253);
+    text-transform: uppercase;
+    width: 49%;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    color: aliceblue;
+}
+
+.btn-2{
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: rgb(253, 0, 0);
+    text-transform: uppercase;
+    width: 49%;
+    color: aliceblue;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+
+}
+
+.container-3{
+    display: flex;
+    background-color: rgb(71, 71, 71);
+    width: clamp(300px,50vw,500px);
+    margin-top: 2%;
+    padding: 10px 5px 10px 5px;
+    background-color: #282A31;
+    
+}
+
+.btn-3{
+    width: 100%;
+    color: aliceblue;
+    background-color: aqua;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+
+}
+
+
+.nadstr{
+    color: #51525D;
+    margin: 1% 0px 1% 0px;
+}
+.nadstr::after{
+    content: "⍰";
+    color: aqua;
+    margin-left: 3px;
+}

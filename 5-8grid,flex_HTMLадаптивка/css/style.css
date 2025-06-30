@@ -1,0 +1,386 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(250, 249, 249);
+}
+
+
+.main-1{
+  background-color: rgb(252, 252, 249);/* белый фон*/
+  color: azure;
+  text-align: center;
+  font: 900 70px "Roboto", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+
+.cont{
+    display: flex;
+    flex-wrap:wrap;
+    width: 98%;
+    margin: 20px 1% 20px 1%;
+}
+.item{
+    background-color: rgb(0, 117, 195);
+    border-radius: 12px;
+    align-self: center;
+    height: 7vh;
+
+}
+.cont-1{
+    display: flex;
+    gap: 1%;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    text-align: center;
+}
+
+
+.item-1{
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    background-color: rgb(255, 0, 0);
+    width: 98%;
+    height: 7vh;
+    align-items: center;
+    margin: 0px 1% 20px 1%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+
+}
+
+.header-nav {
+    display: flex; 
+    list-style: none; 
+    height: 100%; 
+    align-items: center; 
+    justify-content: space-around; 
+}
+
+.header-nav li {
+    color: white; /* Цвет текста */
+    padding: 0 10px; /* Отступы слева и справа для каждого пункта */
+}
+
+
+.item-1-2, .item-1-4{
+    width: 27.5%;
+}
+.item-1-3{
+    width: 45%;
+}
+.cont-11{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+
+}
+.item-1-5,.item-1-6,.item-1-7,.item-1-8{
+    width: 24%;
+}
+
+.cont-2{
+    display: grid; 
+    color: aliceblue;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    background-color: rgb(250, 250, 250); /* белый фон*/
+    grid-auto-flow: row dense; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 0.2fr; 
+    gap: 20px 20px; 
+    grid-template-areas: 
+      ". ."
+      ". .";  }
+
+    .item-2-1{
+
+        margin-left: 20px;
+    }
+    .item-2-2{
+        margin-right: 20px;
+    }
+    .item-2-1, .item-2-2{
+        background-image: url("/grid_HTML/photo.jpg");
+        background-size: cover; 
+        background-position: center; 
+        height: 400px;
+    }
+    .item-2-3{
+        margin-left: 20px;
+    }
+    .item-2-4{
+        margin-right: 20px;
+    }
+
+.cont-3{
+    display: flex;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    flex-wrap: wrap;
+    width: 98%;
+    margin: 1% 1% 0px 1%;
+    gap: 20px;
+}
+
+.item-3-1,.item-3-2{
+    width: 100%;
+    height: 7vh;
+}
+
+@media (min-width: 320px) and (max-width: 425.98px) { 
+    .main-1{
+        font: 700 30px "Roboto", sans-serif;
+        min-height: 100vh;
+    }
+    .header{
+        margin: 0px 12px 7hv 12px;
+
+    }
+
+    .cont-2{
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 0.2fr 1fr 0.2fr; 
+        gap: 4px 4px; 
+        margin-left: 12px;
+        margin-right: 12px;
+        grid-template-areas: 
+          "."
+          "."
+          "."
+          ".";  }
+    .item-2-1{
+        margin-left: 0px;
+    }
+    .item-2-2{
+        background-image: none;
+        margin-right: 0px;
+        height: 5vh;
+    }
+    .item-2-3{
+        background-image: url("/grid_HTML/photo.jpg");
+        background-size: cover; 
+        background-position: center; 
+        height: 400px;
+        margin-left: 0px;
+    }
+    .item-2-4{
+        background-image: none;
+        margin-right: 0px;
+        height: 5vh;
+    }
+
+    .cont-11{
+        flex-direction: column;
+        margin-left: 12px;
+        margin-right: 12px;
+        gap: 10px;
+    }
+    .item-1-5,.item-1-6,.item-1-7,.item-1-8{
+        width: 80%;
+    }
+
+    .cont-3{
+        width: 98%;
+        margin: 1% 1% 0px 1%;
+        gap: 10px;
+    }
+    
+    .item-3-1,.item-3-2{
+        width: 100%;
+        height: 6vh;
+    }
+       
+}
+
+
+
+/* Адаптация меню для мобильных */
+@media (max-width: 768px) {
+    .burger-btn {
+        display: flex;
+    }
+    
+    .header-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgb(255, 0, 0);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 5;
+    }
+    
+    .header-nav.active {
+        left: 0;
+    }
+    
+    .header-nav li {
+        margin: 15px 0;
+        font-size: 20px;
+    }
+}
+
+
+/* Медиа-запросы для планшетов (от 426px до 768px) */
+@media (min-width: 426px) and (max-width: 768px) {
+  /* Основные изменения для планшетов */
+
+  /* Уменьшаем шрифты в основном блоке */
+  .main-1 {
+    font: 700 50px "Roboto", sans-serif;
+  }
+
+  /* Корректировка заголовка */
+  .header {
+    height: 6vh;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (20 - 14) + 14px);
+  }
+
+  /* Меню навигации */
+  .header-nav {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: rgb(255, 0, 0);
+    transition: left 0.3s ease;
+  }
+
+  .header-nav.active {
+    left: 0;
+  }
+
+  /* Кнопка бургера */
+  .burger-btn {
+    display: flex;
+  }
+
+  /* Контейнер для элементов */
+  .cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Элементы внутри контейнера */
+  .item {
+    width: 90%;
+    height: 8vh;
+    margin: 10px 0;
+  }
+
+  /* Размеры для изображений в grid */
+  .item-2-1, .item-2-2 {
+    height: 250px;
+  }
+
+  /* Внутренние блоки для мобильных */
+  .cont-11 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Шрифты внутри */
+  .cont-3 {
+    width: 95%;
+    gap: 15px;
+  }
+
+  /* Элементы внутри */
+  .item-3-1, .item-3-2 {
+    height: 6vh;
+  }
+}
+
+/* Медиа-запросы для мобильных устройств (до 425.98px) */
+@media (max-width: 425.98px) {
+  /* Уже есть некоторые стили, дополним или уточним */
+
+  /* Основной шрифт и размеры */
+  .main-1 {
+    font: 700 30px "Roboto", sans-serif;
+    min-height: 100vh;
+  }
+
+  /* Заголовок */
+  .header {
+    height: 5vh;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 12) + 12px);
+    margin: 0 12px 7vh 12px;
+  }
+
+  /* Меню навигации - делаем его фиксированным и вертикальным */
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgb(255, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+  }
+
+  .header-nav.active {
+    left: 0;
+  }
+
+  /* Кнопка бургера видна всегда */
+  .burger-btn {
+    display: flex;
+    margin: 10px;
+  }
+
+  /* Контейнер для элементов */
+  .cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Размеры элементов */
+  .item {
+    width: 90%;
+    height: 7vh;
+    margin: 10px 0;
+  }
+
+  /* grid-элементы */
+  .item-2-1, .item-2-2 {
+    height: 200px;
+  }
+
+  /* Контейнер для карточек */
+  .cont-3 {
+    width: 95%;
+    gap: 10px;
+  }
+
+  /* Высота элементов внутри */
+  .item-3-1, .item-3-2 {
+    height: 5vh;
+  }
+
+  /* Общее для всех элементов: уменьшаем шрифты */
+  body {
+    font-size: 14px;
+  }
+}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа</title>
+    <script>
+        // Задание 1
+        function showCurrentDate() {
+            let date = new Date();
+            let day = date.getDate();
+            alert("Текущее число месяца: " + day);
+        }
+    </script>
+    <script src="script.js"></script> <!-- Внешний файл для задания 4 -->
+</head>
+<body>
+    <!-- Задание 1 -->
+    <button onclick="showCurrentDate()">Показать год</button>
+    
+    <!-- Задание 2 -->
+    <button onclick="showFIO()">Вывести ФИО</button>
+    <p id="fioOutput"></p>
+    
+    <!-- Задание 3 -->
+    <button onclick="processArray()">Обработать массив</button>
+    <p id="originalArray"></p>
+    <p id="modifiedArray"></p>
+    <p id="sumEven"></p>
+    
+    <!-- Задание 4 -->
+    <label>Введите x: <input type="number" id="inputX"></label>
+    <label>Введите a: <input type="number" id="inputA"></label>
+    <button onclick="showCalculation()">Рассчитать</button>
+    <p id="mathResult"></p>
+    
+    <!-- Задание 5 -->
+    <button onclick="BEL()">Обработать строки</button>
+    <p id="lengthS1"></p>
+    <p id="modifiedS1"></p>
+    <p id="lengthS2"></p>
+    <p id="modifiedS2"></p>
+    <p id="isMinskInS1"></p>
+    <p id="eighthCharS2"></p>
+    <p id="asciiEighthCharS2"></p>
+    
+    <script>
+        // Задание 2: Циклы
+        function showFIO() {
+            let n = 8; // Базовое значение +5 = 13 раз
+            let output = "";
+            let i = 0;
+            
+            do {
+                output += "Кухта Дарья Игоревна<br>";
+                i++;
+            } while(i < n + 5);
+            
+            document.getElementById("fioOutput").innerHTML = output;
+        }
+        
+        // Задание 3: Работа с массивами
+        function processArray() {
+            let array = [12, 7, 5, 9, 3, 15];
+            let sumEven = array.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
+            
+            let sortedArray = [...array].sort((a, b) => b - a);
+            
+            document.getElementById("originalArray").innerText = "Исходный массив: " + array.join(", ");
+            document.getElementById("modifiedArray").innerText = "Отсортированный массив: " + sortedArray.join(", ");
+            document.getElementById("sumEven").innerText = "Сумма четных элементов: " + sumEven;
+        }
+        
+        // Задание 5: Работа со строками
+        function BEL() {
+            let s1 = "Я люблю Беларусь";
+            let s2 = "Я учусь в Политехническом колледже";
+
+            // 1. Определение длины строк
+            document.getElementById("lengthS1").innerHTML = `Длина строки s1: ${s1.length}`;
+            document.getElementById("lengthS2").innerHTML = `Длина строки s2: ${s2.length}`;
+            
+            // 2. Удаление подстроки "учусь" из s2
+            let modifiedS2 = s2.replace("учусь ", "");
+            document.getElementById("modifiedS2").innerHTML = `Строка s2 после удаления "учусь": ${modifiedS2}`;
+            
+            // 3. Замена всех букв "ю" на "*" в s1
+            let modifiedS1 = s1.replace(/ю/g, "*");
+            document.getElementById("modifiedS1").innerHTML = `Строка s1 после замены "ю" на "*": ${modifiedS1}`;
+            
+        }
+        
+        // Функция для вызова расчета из задания 4
+        function showCalculation() {
+            let x = parseFloat(document.getElementById("inputX").value);
+            let a = parseFloat(document.getElementById("inputA").value);
+            let result = calculateFormula(x, a);
+            
+            if (typeof result === "number") {
+                document.getElementById("mathResult").innerText = "Результат: " + result.toFixed(4);
+            } else {
+                document.getElementById("mathResult").innerText = result; // Вывод сообщения об ошибке
+            }
+        }
+    </script>
+</body>
+</html>

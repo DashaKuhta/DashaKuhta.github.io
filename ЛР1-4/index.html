@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    
+    <!-- Внешний файл стилей -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Импортирование шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Внутренняя таблица стилей */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            animation: fadeIn 1s;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        div {
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box; /* универсальный селектор */
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .highlight { /* селектор класса */
+            background-color: yellow; 
+        }
+
+        #main-title { /* селектор идентификатора */
+            font-size: 24px; 
+        }
+
+        a:hover { /* псевдокласс */
+            text-decoration: underline; 
+        }
+
+        h2::first-letter { /* псевдоэлемент */
+            font-size: 2em; 
+            font-weight: bold; 
+        }
+
+        div > p { /* селектор дочерних элементов */
+            color: #555; 
+        }
+
+        h3 + div { /* соседний селектор */
+            border-top: 2px solid #4CAF50; 
+        }
+
+        a[href*="instagram"] { /* селектор атрибутов */
+            color: #E1306C; 
+        }
+
+        h3, .highlight { /* комбинированный селектор: тег и класс */
+            color: #4CAF50; 
+        }
+
+        /* Стиль для кнопки */
+        button {
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            padding: 10px 15px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+
+        /* Стилизация изображений */
+        img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Стилизация таблицы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        th:hover, td:hover {
+            background-color: #e0f7e0; /* светлый фон при наведении */
+        }
+
+        /* Стилизация списков */
+        ul.custom-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.custom-list li {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        ul.custom-list li::before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        /* Анимация */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+    </style>
+
+    <!-- Внутритеговое включение таблиц стилей  -->
+    <style>
+        @import url('styles.css'); /* подключения к внешнему файлу */
+    </style>
+</head>
+
+<body>
+    <header id="top">
+        <h1 id="main-title">Визитка</h1> 
+        <h2>Кухта Дарья Игоревна</h2>
+        <img src="img/foto.jpg" alt="Фото" width="200">
+    </header>
+    
+    <div>
+        <p><b>Дата рождения: </b>17.03.2007</p>
+        <p><b>Город: </b>Гродно</p>
+        <p><b>Телефон: </b>+375256289617</p>
+        <p><b>Почта: </b>darakuhta6@gmail.com</p>
+    </div>
+    
+    <div>
+        <h3>Социальные сети: </h3>
+        <ul>
+            <li><a href="https://www.instagram.com/_daria_kukhta_?igsh=MXd2bmQxczAyZ2pxNQ==">Инстаграм</a></li>        
+        </ul>
+    </div>
+    
+    <div>
+        <h3>Любимые исполнители:</h3>
+        <div>
+            <p><b>Scriptonite</b></p>
+            <p><img src="img/Scriptonite.jpg" alt="Фото Scriptonite" width="400"></p>
+            <p><audio controls src="audio/Moscowloves.mp3"></audio></p>
+        </div>
+        <div>
+            <p><b>Beyonce</b></p>
+            <p><img src="img/qwer.jpg" alt="Фото Beyonce" width="300"></p>
+            <p><audio controls src="audio/Beyonce.mp3"></audio></p>
+        </div>
+    </div>
+    
+    <div>
+        <h3>Любимый фильм и сериал:</h3>
+        <div>
+            <p><b>Фильм "11 друзей Оушена"</b></p>
+            <p><video controls src="video/11 друзей Оушена.mp4" width="500"></video></p>
+            <p><b>kinogo: </b><a href="https://kinogo.ec/12680-odinnadcat-druzej-oushena.html">11 друзей Оушена</a></p>
+        </div>
+        <div>
+            <p><b>Сериал "Молодёжка"</b></p>
+            <p><video controls src="video/Молодёжка.mp4" width="500"></video></p>
+            <p><b>kinogo: </b><a href="https://kinogo.inc/drama/3363-molodezhka-2024.html">Молодёжка</a></p>
+        </div>
+    </div>
+    
+    <div>
+        <h3>Топ любимых книг:</h3>
+        <table>
+            <tr>
+                <th>Название книги</th>
+                <td>Косточка с вишней</td>
+                <td>Худшие подруги</td>
+                <td>Френдзона</td>
+                <td>Не люби меня осторожно</td>
+            </tr>
+            <tr>
+                <th>Автор</th>
+                <td colspan="3">Ася Лавринович</td>
+                <td>Константин Зарубин</td>
+            </tr>
+            <tr>
+                <th>Жанр</th>
+                <td colspan="3">Роман</td>
+                <td>Литература по саморазвитию</td>
+            </tr>
+            <tr>
+                <th>Фото книги</th>
+                <td><img src="img/qwe.jpg" alt="Книга - Косточка с вишней" width="200"></td>
+                <td><img src="img/33.jpg" alt="Книга - Худшие подруги" width="200"></td>
+                <td><img src="img/22.jpg" alt="Книга - Френдзона" width="200"></td>
+                <td><img src="img/55.jpg" alt="Книга - Не люби меня осторожно" width="200"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div>
+        <h3>О себе:</h3>
+        <p>Привет! Меня зовут <b>Даша</b>, мне нравится проводить время с друзьями и я считаю себя <i>активным человеком</i>.</p>
+        <p>Мои хобби:</p>
+        <ol>
+            <li>Футбол</li>
+            <li>Волейбол</li>
+        </ol>
+        <ul class="custom-list">
+            <li>Мой любимый вид спорта — <b><i>футбол и волейбол</i></b>. Это сочетание энергии, скорости, тактики и стратегий игр, а также это <u>эмоции</u>, которые не передать через экран.</li>
+        </ul>
+    </div>
+    
+    <div>
+        <p><a href="index_autorization.html">Войти в профиль</a></p>
+    </div>
+    <div>
+        <p><a href="index_anketa.html">Пройти анкету</a></p>
+    </div>
+    
+    <div>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Вернуться наверх</button>
+    </div>
+    
+    <div>
+        <p><a href="https://github.com/DashaKuhta">Ссылка на GitHub</a></p>
+    </div>
+</body>
+</html>

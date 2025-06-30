@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Integration Examples</title>
+    <!-- 3. Подключение внешнего JS-файла (3 способ внедрения) -->
+    <script src="external.js"></script>
+</head>
+<body>
+
+<h2>JavaScript</h2>
+
+<!-- 1. Встроенный JS через атрибуты событий (1 способ внедрения) -->
+<button onclick="countClicks()">Нажми на меня</button>
+<button onclick="resetCount()">Сбросить счетчик</button>
+
+<p id="clicks">Количество нажатий: 0</p>
+
+<p id="demo"></p>
+
+<input type="number" id="myNumber" value="">
+<button onclick="displayNumber()">Отобразить число</button>
+<p></p>
+<input type="number" id="myNumber-2" value="">
+<button onclick="displayNumberP()">Отобразить число</button>
+<p id="print"></p>
+<p>
+    <input type="number" id="myNumber-3" value="">
+    <button onclick="Cwhile()">Отобразить число</button>
+    <p id="print-2"></p>
+</p>
+
+<!-- 4. JS через псевдо-URL (4 способ внедрения) -->
+<a href="javascript:void(0)" onclick="showDoWhileExample()">Показать пример do..while</a>
+<br><br>
+
+<input type="button" onclick="show_confirm()" value="Показать окно подтверждения" /> 
+<input type="button" onclick="show_prompt()" value="Показать окно приглашения" /> 
+
+<!-- 2. Встроенный JS через тег script (2 способ внедрения) -->
+<script>
+// Внешний скрипт (external.js) уже подключен в head
+
+// Обработчики событий в JS коде 
+document.addEventListener('DOMContentLoaded', function() {
+    
+    console.log("DOM загружен");
+});
+
+let clickCount = 0;
+function countClicks() {
+    clickCount++;
+    document.getElementById("clicks").innerHTML = "Количество нажатий: " + clickCount;
+    // Использование оператора if
+    if (clickCount % 2 == 0) {
+        document.getElementById("clicks").style.color = "red";
+    } else {
+        document.getElementById("clicks").style.color = "black";
+    }
+    // Использование оператора return
+    if(clickCount==10){
+        return document.getElementById("clicks").style.color = "pink";
+    }
+}
+
+function resetCount() {
+    clickCount = 0;
+    document.getElementById("clicks").innerHTML = "Количество нажатий: " + clickCount;
+    document.getElementById("clicks").style.color = "black";
+}
+
+function displayNumber() {
+    let num = document.getElementById("myNumber").value;
+    let text;
+    // Использование оператора switch
+    switch (num) {
+        case '1':
+            text = "Вы ввели число 1";
+            break; // Использование оператора break
+        case '2':
+            text = "Вы ввели число 2";
+            break;
+        case '3':
+            text = "Вы ввели число 3";
+            break;
+        default:
+            text = "Вы ввели число " + num;
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+
+function displayNumberP() {
+    let num_2 = Number(document.getElementById("myNumber-2").value);    
+    let num_f  = num_2 + 5;
+    let output = "";
+    // Использование оператора for
+    for (let i = num_2; i <= num_f; i++){
+        if(i==10){
+            // Использование оператора continue
+            output += "Значениe пропустили" + "<br>";
+            continue;
+        }
+        output += "Значения " + i + "<br>";
+    }
+    document.getElementById("print").innerHTML = output;
+}
+
+function Cwhile() {
+    let num_3 = Number(document.getElementById("myNumber-3").value);
+    let num_g  = num_3 + 5;
+    let output = "";
+    // Использование оператора while
+    while(num_3<=num_g) {
+        output += "Значения " + num_3 + "<br>";
+        num_3++;
+    }       
+    document.getElementById("print-2").innerHTML = output;
+}
+
+// Добавим пример с do..while
+function showDoWhileExample() {
+    let output = "Пример do..while: ";
+    let i = 1;
+    do {
+        output += i + " ";
+        i++;
+    } while(i <= 5);
+    alert(output);
+}
+
+// Использование диалоговых окон
+function show_confirm() { 
+    // Использование метода confirm()
+    var r=confirm("Нажмите кнопку!"); 
+    // Использование метода alert()
+    if (r==true) { 
+        alert("Вы нажали OK!"); 
+    } else { 
+        alert("Вы нажали Отмена!"); 
+    } 
+} 
+
+function show_prompt() { 
+    // Использование метода prompt()
+    var name=prompt("Пожалуйста, введите ваше имя","Гарри Поттер"); 
+    if (name!=null && name!="") { 
+        document.write("Привет " + name + "! Как дела сегодня?"); 
+    } 
+} 
+
+// Пример с динамической загрузкой скрипта
+function loadExternalScript() {
+    const script = document.createElement('script');
+    script.src = 'dynamically-loaded.js';
+    document.body.appendChild(script);
+}
+</script>
+
+<!-- Еще один способ: отложенная загрузка скрипта -->
+<script src="lazy-loaded.js" defer></script>
+
+</body>
+</html>
